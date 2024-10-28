@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh;
+    margin: 0;
+    background-color: #ffeef8; /* Soft pink background */
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.heart {
+    font-size: 100px; /* Large heart for easy tapping */
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s; /* Smooth transition for effects */
+}
+
+.heart:hover {
+    transform: scale(1.1); /* Slightly enlarge heart on hover */
+    color: #ff4d4d; /* Change color on hover */
+}
+
+#message {
+    font-size: 48px;
+    margin-top: 20px;
+    color: #ff3366; /* Color for the text */
+    animation: fadeIn 0.5s; /* Fade-in effect for text */
+}
+
+#quote {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #9b59b6; /* Color for the quote */
+    animation: fadeIn 0.5s; /* Fade-in effect for quote */
+}
+
+.hidden {
+    display: none; /* Hide the text initially */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button styling */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff69b4; /* Button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ff4d94; /* Darker shade on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .heart {
+        font-size: 80px; /* Smaller heart for mobile */
+    }
+    
+    #message {
+        font-size: 36px; /* Smaller text for mobile */
+    }
+    
+    #quote {
+        font-size: 18px; /* Smaller quote for mobile */
+    }
+    
+    button {
+        font-size: 16px; /* Smaller button for mobile */
+    }
+}
